@@ -34,5 +34,9 @@ vim.keymap.set("n", "<up>", "<cmd>resize +4<cr>", { desc = "Bigger horizontal sp
 vim.keymap.set("n", "<left>", "<cmd>vertical resize -4<cr>", { desc = "Smaller vertical split" })
 vim.keymap.set("n", "<right>", "<cmd>vertical resize +4<cr>", { desc = "Bigger vertical split" })
 
+-- editing files
 vim.keymap.set("n", "<leader>w", ":w<CR>", { desc = "Write" })
 vim.keymap.set("n", "<leader>q", ":q<CR>", { desc = "Quit" })
+
+-- nvim-tree
+vim.keymap.set("n", "<leader>te", ":NvimTreeToggle<CR>", { desc = "Toggle File Explorer" })
