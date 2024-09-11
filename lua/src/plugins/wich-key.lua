@@ -7,13 +7,13 @@ return { -- Useful plugin to show you pending keybinds.
 
 		-- Document existing key chains
 		wk.add({
-			{ "<leader>c", desc = "[C]ode", hidden = true },
-			{ "<leader>d", desc = "[D]ocument", hidden = true },
-			{ "<leader>r", desc = "[R]ename", hidden = true },
-			{ "<leader>s", desc = "[S]earch", hidden = true },
-			{ "<leader>w", desc = "[W]orkspace", hidden = true },
-			{ "<leader>t", desc = "[T]oggle", hidden = true },
-			{ "<leader>h", desc = "Git [H]unk", hidden = true },
+			{ "<leader>c", desc = "[C]ode" },
+			{ "<leader>d", desc = "[D]ocument" },
+			{ "<leader>r", desc = "[R]ename" },
+			{ "<leader>s", desc = "[S]earch" },
+			{ "<leader>w", desc = "[W]orkspace" },
+			{ "<leader>t", desc = "[T]oggle" },
+			{ "<leader>h", desc = "Git [H]unk" },
 		})
 		-- visual mode
 		wk.add({
