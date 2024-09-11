@@ -4,7 +4,7 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next [D]iagnostic message" })
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show diagnostic [E]rror messages" })
-vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
+vim.keymap.set("n", "<leader>o", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
@@ -33,3 +33,6 @@ vim.keymap.set("n", "<down>", "<cmd>resize -4<cr>", { desc = "Smaller horizontal
 vim.keymap.set("n", "<up>", "<cmd>resize +4<cr>", { desc = "Bigger horizontal split" })
 vim.keymap.set("n", "<left>", "<cmd>vertical resize -4<cr>", { desc = "Smaller vertical split" })
 vim.keymap.set("n", "<right>", "<cmd>vertical resize +4<cr>", { desc = "Bigger vertical split" })
+
+vim.keymap.set("n", "<leader>w", ":w<CR>", { desc = "Write" })
+vim.keymap.set("n", "<leader>q", ":q<CR>", { desc = "Quit" })
