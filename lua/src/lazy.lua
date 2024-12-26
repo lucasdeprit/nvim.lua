@@ -32,3 +32,19 @@ require("lazy").setup({
 		},
 	},
 })
+
+local Terminal = require("toggleterm.terminal").Terminal
+
+-- Crea una terminal flotante
+local float_term = Terminal:new({
+	direction = "float", -- Dirección flotante
+	hidden = true, -- Oculta cuando no está activa
+})
+
+-- Función para hacer toggle de la terminal flotante
+function _FLOAT_TERM_TOGGLE()
+	float_term:toggle()
+end
+
+-- Crear un comando para usarlo
+vim.api.nvim_create_user_command("ToggleFloat", _FLOAT_TERM_TOGGLE, { desc = "Toggle floating terminal" })
