@@ -14,10 +14,10 @@ function M.setup()
 	vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 
 	-- Window navigation
-	vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Move focus to the left window" })
-	vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move focus to the right window" })
-	vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Move focus to the lower window" })
-	vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Move focus to the upper window" })
+	vim.keymap.set("n", "<C-H>", "<C-w>h", { desc = "Move focus to the left window" })
+	vim.keymap.set("n", "<C-L>", "<C-w>l", { desc = "Move focus to the right window" })
+	vim.keymap.set("n", "<C-J>", "<C-w>j", { desc = "Move focus to the lower window" })
+	vim.keymap.set("n", "<C-K>", "<C-w>k", { desc = "Move focus to the upper window" })
 
 	-- Split management
 	vim.keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" })
