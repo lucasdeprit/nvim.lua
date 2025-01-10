@@ -62,6 +62,9 @@ vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 -- Preview substitutions live, as you type!
 vim.opt.inccommand = "split"
 
+-- Relative numbers
+vim.opt.relativenumber = true
+
 -- Show which line your cursor is on
 vim.opt.cursorline = true
 
