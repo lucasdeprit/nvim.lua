@@ -35,7 +35,7 @@ function M.setup()
 	vim.keymap.set("n", "<leader>q", ":q<CR>", { desc = "Quit" })
 
 	-- Nvim-tree
-	vim.keymap.set("n", "<leader>te", ":NvimTreeToggle<CR>", { desc = "Toggle File Explorer" })
+	--vim.keymap.set("n", "<leader>te", ":NvimTreeToggle<CR>", { desc = "Toggle File Explorer" })
 
 	vim.keymap.set("i", "jk", "<esc>", { desc = "Escape insert mode" })
 

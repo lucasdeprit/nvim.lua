@@ -73,30 +73,37 @@ local function toggle_telescope(harpoon_files)
 end
 
 vim.keymap.set("n", "<C-e>", function()
+	harpoon.ui:toggle_quick_menu(harpoon:list())
+end, { desc = "[HARPOON] - Open quick menu" })
+
+vim.keymap.set("n", "<leader>sb", function()
 	toggle_telescope(harpoon:list())
-end, { desc = "Open harpoon window" })
+end, { desc = "[HARPOON] - Open search with telescope" })
 
 vim.keymap.set("n", "<leader>a", function()
 	harpoon:list():add()
-end)
+end, { desc = "[HARPOON] - Add a buffer" })
 
 vim.keymap.set("n", "<C-h>", function()
 	harpoon:list():select(1)
-end)
+end, { desc = "[HARPOON] - Select 1st buffer" })
+
 vim.keymap.set("n", "<C-j>", function()
 	harpoon:list():select(2)
-end)
+end, { desc = "[HARPOON] - Select 2nd buffer" })
+
 vim.keymap.set("n", "<C-k>", function()
 	harpoon:list():select(3)
-end)
+end, { desc = "[HARPOON] - Select 3rd buffer" })
+
 vim.keymap.set("n", "<C-l>", function()
 	harpoon:list():select(4)
-end)
+end, { desc = "[HARPOON] - Select 4th buffer" })
 
 -- Toggle previous & next buffers stored within Harpoon list
 vim.keymap.set("n", "<C-Tab>", function()
 	harpoon:list():prev()
-end)
+end, { desc = "[HARPOON] - Toggle previous buffer" })
 vim.keymap.set("n", "<C-S-Tab>", function()
 	harpoon:list():next()
-end)
+end, { desc = "[HARPOON] - Toggle next buffer" })
