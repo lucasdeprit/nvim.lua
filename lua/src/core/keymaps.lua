@@ -46,6 +46,12 @@ function M.setup()
 		"<cmd>ToggleFloat<CR>",
 		{ noremap = true, silent = true, desc = "Toggle floating terminal" }
 	)
+	vim.keymap.set(
+		"n",
+		"<leader>tg",
+		"<cmd>ToggleLazyGit<CR>",
+		{ noremap = true, silent = true, desc = "Toggle lazyGit floating terminal" }
+	)
 end
 
 function M.set_terminal_keymaps()

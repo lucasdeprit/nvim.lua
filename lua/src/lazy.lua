@@ -33,22 +33,6 @@ require("lazy").setup({
 	},
 })
 
-local Terminal = require("toggleterm.terminal").Terminal
-
--- Crea una terminal flotante
-local float_term = Terminal:new({
-	direction = "float", -- Dirección flotante
-	hidden = true, -- Oculta cuando no está activa
-})
-
--- Función para hacer toggle de la terminal flotante
-function _FLOAT_TERM_TOGGLE()
-	float_term:toggle()
-end
-
--- Crear un comando para usarlo
-vim.api.nvim_create_user_command("ToggleFloat", _FLOAT_TERM_TOGGLE, { desc = "Toggle floating terminal" })
-
 local harpoon = require("harpoon")
 harpoon:setup({})
 
@@ -107,3 +91,40 @@ end, { desc = "[HARPOON] - Toggle previous buffer" })
 vim.keymap.set("n", "<C-S-Tab>", function()
 	harpoon:list():next()
 end, { desc = "[HARPOON] - Toggle next buffer" })
+
+-- Terminals!
+
+local Terminal = require("toggleterm.terminal").Terminal
+
+-- Crea una terminal flotante
+local float_term = Terminal:new({
+	direction = "float", -- Dirección flotante
+	hidden = true, -- Oculta cuando no está activa
+})
+
+-- Función para hacer toggle de la terminal flotante
+function _FLOAT_TERM_TOGGLE()
+	float_term:toggle()
+end
+
+-- Crear un comando para usarlo
+vim.api.nvim_create_user_command("ToggleFloat", _FLOAT_TERM_TOGGLE, { desc = "Toggle floating terminal" })
+
+-- LazyGit term
+
+local float_lazy_git_term = Terminal:new({
+	cmd = "lazygit",
+	display_name = "lazygit",
+	direction = "float",
+	hidden = true,
+})
+
+function _FLOAT_LAZY_GIT_TERM_TOGGLE()
+	float_lazy_git_term:toggle()
+end
+
+vim.api.nvim_create_user_command(
+	"ToggleLazyGit",
+	_FLOAT_LAZY_GIT_TERM_TOGGLE,
+	{ desc = "Toggle lazyGit floating terminal" }
+)
